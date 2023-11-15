@@ -1,0 +1,29 @@
+
+
+server:
+  port: 9876
+  
+spring:    
+  application:
+    name: Harpia
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/studentdb
+    username: postgres
+    password: boss
+    
+#JPA properties
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    open-in-view: false
+    
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+    
+    
